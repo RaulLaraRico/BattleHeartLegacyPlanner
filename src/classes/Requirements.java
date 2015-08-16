@@ -10,12 +10,13 @@ package classes;
  *
  * @author Raul
  */
-class Requirements {
+public class Requirements {
     private String stat;
     private int amount;
 
-    private Requirements() {
-        
+    public Requirements(String stat, int amount) {
+        this.stat = stat;
+        this.amount = amount;
     }
     
     public String getStat() {

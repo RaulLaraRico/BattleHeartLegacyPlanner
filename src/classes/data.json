@@ -5,167 +5,167 @@
             "skills": [
                 {
                     "skillName": "Enrage",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Enrage.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Enrage.png",
                     "description": "Fly into a rage for 10 seconds, + increasing all damage dealt AND recieved by 40%.",
                     "cooldown": "20 secs",
-                    "requirements": [
-                        {
-                            "STR": "9",
-                            "SKL": "6"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "9",
+                                "SKL": "6"
+                            }
+
                 },
                 {
                     "skillName": "Collosal Weapons",
-                    "type":"Passive",
-                    "imgurl":"barbarian/Skill-barbarian-ColossalWeapons.png",
+                    "type": "Passive",
+                    "imgurl": "barbarian/Skill-barbarian-ColossalWeapons.png",
                     "description": "Allows the use of colossal two-handed weapons.",
                     "cooldown": "0 secs",
-                    "requirements": [
-                        {
-                            "STR": "11",
-                            "SKL": "6"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "11",
+                                "SKL": "6"
+                            }
+
                 },
                 {
                     "skillName": "Whirlwind",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Whirlwind.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Whirlwind.png",
                     "description": "Unlease a spiral of death, dealing 3.6x normal damage to all nearby foes.  Requires a colossal weapon.",
                     "cooldown": "15 secs",
-                    "requirements": [
-                        {
-                            "STR": "13",
-                            "SKL": "7"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "13",
+                                "SKL": "7"
+                            }
+
                 },
                 {
                     "skillName": "Reckless Blow",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Reckless_Blow.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Reckless_Blow.png",
                     "description": "A wild attack that deals 6x normal damage, but also damages you for 30% of your current health. Requires a colossal weapon.",
                     "cooldown": "8 secs",
-                    "requirements": [
-                        {
-                            "STR": "15",
-                            "SKL": "8"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "15",
+                                "SKL": "8"
+                            }
+
                 },
                 {
                     "skillName": "Death Wish",
-                    "type":"Passive",
-                    "imgurl":"barbarian/Skill-barbarian-Death_Wish.png",
+                    "type": "Passive",
+                    "imgurl": "barbarian/Skill-barbarian-Death_Wish.png",
                     "description": "You deal extra damage the lower your current health is, reaching as high as 30% extra damage.",
                     "cooldown": "0 secs",
-                    "requirements": [
-                        {
-                            "STR": "18",
-                            "SKL": "8",
-                            "END": "6"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "18",
+                                "SKL": "8",
+                                "END": "6"
+                            }
+
                 },
                 {
                     "skillName": "Savage Pounce",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Savage_Pounce.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Savage_Pounce.png",
                     "description": "Leap at your target, dealing 2x weapon power as crushing damage around the point of impact.",
                     "cooldown": "8 secs",
-                    "requirements": [
-                        {
-                            "STR": "20",
-                            "SKL": "9",
-                            "END": "7"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "20",
+                                "SKL": "9",
+                                "END": "7"
+                            }
+
                 },
                 {
                     "skillName": "Deep Wounds",
-                    "type":"Passive",
-                    "imgurl":"barbarian/Skill-barbarian-Deep_Wounds.png",
+                    "type": "Passive",
+                    "imgurl": "barbarian/Skill-barbarian-Deep_Wounds.png",
                     "description": "Your critical hits with bladed weapons cause enemies to bleed for additional damage.",
                     "cooldown": "0 secs",
-                    "requirements": [
-                        {
-                            "STR": "25",
-                            "SKL": "12",
-                            "END": "7"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "25",
+                                "SKL": "12",
+                                "END": "7"
+                            }
+
                 },
                 {
                     "skillName": "Banish",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Banish.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Banish.png",
                     "description": "Strike your target for 2.2x damage and send them flying, knocking them down for 5 sec. Requires a colossal weapon.",
                     "cooldown": "15 secs",
-                    "requirements": [
-                        {
-                            "STR": "29",
-                            "SKL": "13",
-                            "END": "7"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "29",
+                                "SKL": "13",
+                                "END": "7"
+                            }
+
                 },
                 {
                     "skillName": "Adrenaline Rush",
-                    "type":"Passive",
-                    "imgurl":"barbarian/Skill-barbarian-Adrenaline_Rush.png",
+                    "type": "Passive",
+                    "imgurl": "barbarian/Skill-barbarian-Adrenaline_Rush.png",
                     "description": "Strike your target for 2.2x damage and send them flying, knocking them down for 5 sec. Requires a colossal weapon.",
                     "cooldown": "0 secs",
-                    "requirements": [
-                        {
-                            "STR": "32",
-                            "SKL": "14",
-                            "END": "8"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "32",
+                                "SKL": "14",
+                                "END": "8"
+                            }
+
                 },
                 {
                     "skillName": "Last Stand",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Last_Stand.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Last_Stand.png",
                     "description": "Become immune to all damage for 8 seconds.  Can only be used when your health is below 30%.",
                     "cooldown": "40 secs",
-                    "requirements": [
-                        {
-                            "STR": "35",
-                            "SKL": "15",
-                            "END": "10"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "35",
+                                "SKL": "15",
+                                "END": "10"
+                            }
+
                 },
                 {
                     "skillName": "Slaughter",
-                    "type":"Passive",
-                    "imgurl":"barbarian/Skill-barbarian-Slaughter.png",
+                    "type": "Passive",
+                    "imgurl": "barbarian/Skill-barbarian-Slaughter.png",
                     "description": "Increases critical strike chance with axes by 10%",
                     "cooldown": "0 secs",
-                    "requirements": [
-                        {
-                            "STR": "39",
-                            "SKL": "17",
-                            "END": "10"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "39",
+                                "SKL": "17",
+                                "END": "10"
+                            }
+
                 },
                 {
                     "skillName": "Quake Strike",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Quake_Strike.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Quake_Strike.png",
                     "description": "Rend the earth in a line towards your target, dealing 4x damage to all targets in the path.  Requires a colossal weapon.",
                     "cooldown": "20 secs",
-                    "requirements": [
-                        {
-                            "STR": "34",
-                            "SKL": "19",
-                            "END": "10"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "34",
+                                "SKL": "19",
+                                "END": "10"
+                            }
+
                 }
             ]
         },
@@ -174,167 +174,167 @@
             "skills": [
                 {
                     "skillName": "Enrage",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Enrage.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Enrage.png",
                     "description": "Fly into a rage for 10 seconds, + increasing all damage dealt AND recieved by 40%.",
                     "cooldown": "20 secs",
-                    "requirements": [
-                        {
-                            "STR": "9",
-                            "SKL": "6"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "9",
+                                "SKL": "6"
+                            }
+
                 },
                 {
                     "skillName": "Collosal Weapons",
-                    "type":"Passive",
-                    "imgurl":"barbarian/Skill-barbarian-ColossalWeapons.png",
+                    "type": "Passive",
+                    "imgurl": "barbarian/Skill-barbarian-ColossalWeapons.png",
                     "description": "Allows the use of colossal two-handed weapons.",
                     "cooldown": "0 secs",
-                    "requirements": [
-                        {
-                            "STR": "11",
-                            "SKL": "6"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "11",
+                                "SKL": "6"
+                            }
+
                 },
                 {
                     "skillName": "Whirlwind",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Whirlwind.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Whirlwind.png",
                     "description": "Unlease a spiral of death, dealing 3.6x normal damage to all nearby foes.  Requires a colossal weapon.",
                     "cooldown": "15 secs",
-                    "requirements": [
-                        {
-                            "STR": "13",
-                            "SKL": "7"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "13",
+                                "SKL": "7"
+                            }
+
                 },
                 {
                     "skillName": "Reckless Blow",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Reckless_Blow.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Reckless_Blow.png",
                     "description": "A wild attack that deals 6x normal damage, but also damages you for 30% of your current health. Requires a colossal weapon.",
                     "cooldown": "8 secs",
-                    "requirements": [
-                        {
-                            "STR": "15",
-                            "SKL": "8"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "15",
+                                "SKL": "8"
+                            }
+
                 },
                 {
                     "skillName": "Death Wish",
-                    "type":"Passive",
-                    "imgurl":"barbarian/Skill-barbarian-Death_Wish.png",
+                    "type": "Passive",
+                    "imgurl": "barbarian/Skill-barbarian-Death_Wish.png",
                     "description": "You deal extra damage the lower your current health is, reaching as high as 30% extra damage.",
                     "cooldown": "0 secs",
-                    "requirements": [
-                        {
-                            "STR": "18",
-                            "SKL": "8",
-                            "END": "6"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "18",
+                                "SKL": "8",
+                                "END": "6"
+                            }
+
                 },
                 {
                     "skillName": "Savage Pounce",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Savage_Pounce.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Savage_Pounce.png",
                     "description": "Leap at your target, dealing 2x weapon power as crushing damage around the point of impact.",
                     "cooldown": "8 secs",
-                    "requirements": [
-                        {
-                            "STR": "20",
-                            "SKL": "9",
-                            "END": "7"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "20",
+                                "SKL": "9",
+                                "END": "7"
+                            }
+
                 },
                 {
                     "skillName": "Deep Wounds",
-                    "type":"Passive",
-                    "imgurl":"barbarian/Skill-barbarian-Deep_Wounds.png",
+                    "type": "Passive",
+                    "imgurl": "barbarian/Skill-barbarian-Deep_Wounds.png",
                     "description": "Your critical hits with bladed weapons cause enemies to bleed for additional damage.",
                     "cooldown": "0 secs",
-                    "requirements": [
-                        {
-                            "STR": "25",
-                            "SKL": "12",
-                            "END": "7"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "25",
+                                "SKL": "12",
+                                "END": "7"
+                            }
+
                 },
                 {
                     "skillName": "Banish",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Banish.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Banish.png",
                     "description": "Strike your target for 2.2x damage and send them flying, knocking them down for 5 sec. Requires a colossal weapon.",
                     "cooldown": "15 secs",
-                    "requirements": [
-                        {
-                            "STR": "29",
-                            "SKL": "13",
-                            "END": "7"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "29",
+                                "SKL": "13",
+                                "END": "7"
+                            }
+
                 },
                 {
                     "skillName": "Adrenaline Rush",
-                    "type":"Passive",
-                    "imgurl":"barbarian/Skill-barbarian-Adrenaline_Rush.png",
+                    "type": "Passive",
+                    "imgurl": "barbarian/Skill-barbarian-Adrenaline_Rush.png",
                     "description": "Strike your target for 2.2x damage and send them flying, knocking them down for 5 sec. Requires a colossal weapon.",
                     "cooldown": "0 secs",
-                    "requirements": [
-                        {
-                            "STR": "32",
-                            "SKL": "14",
-                            "END": "8"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "32",
+                                "SKL": "14",
+                                "END": "8"
+                            }
+
                 },
                 {
                     "skillName": "Last Stand",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Last_Stand.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Last_Stand.png",
                     "description": "Become immune to all damage for 8 seconds.  Can only be used when your health is below 30%.",
                     "cooldown": "40 secs",
-                    "requirements": [
-                        {
-                            "STR": "35",
-                            "SKL": "15",
-                            "END": "10"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "35",
+                                "SKL": "15",
+                                "END": "10"
+                            }
+
                 },
                 {
                     "skillName": "Slaughter",
-                    "type":"Passive",
-                    "imgurl":"barbarian/Skill-barbarian-Slaughter.png",
+                    "type": "Passive",
+                    "imgurl": "barbarian/Skill-barbarian-Slaughter.png",
                     "description": "Increases critical strike chance with axes by 10%",
                     "cooldown": "0 secs",
-                    "requirements": [
-                        {
-                            "STR": "39",
-                            "SKL": "17",
-                            "END": "10"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "39",
+                                "SKL": "17",
+                                "END": "10"
+                            }
+
                 },
                 {
                     "skillName": "Quake Strike",
-                    "type":"Active",
-                    "imgurl":"barbarian/Skill-barbarian-Quake_Strike.png",
+                    "type": "Active",
+                    "imgurl": "barbarian/Skill-barbarian-Quake_Strike.png",
                     "description": "Rend the earth in a line towards your target, dealing 4x damage to all targets in the path.  Requires a colossal weapon.",
                     "cooldown": "20 secs",
-                    "requirements": [
-                        {
-                            "STR": "34",
-                            "SKL": "19",
-                            "END": "10"
-                        }
-                    ]
+                    "requirements":
+                            {
+                                "STR": "34",
+                                "SKL": "19",
+                                "END": "10"
+                            }
+
                 }
             ]
         }

@@ -7,12 +7,15 @@ package battleheartlegacybuilder;
 
 import classes.Skills;
 import classes.ingameClass;
+import classes.Requirements;
 import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
@@ -20,7 +23,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 
 /**
  *
@@ -39,14 +41,12 @@ public class mainWindow extends javax.swing.JFrame {
     List<JLabel> notPassiveSkills = new ArrayList<>();
     List<JLabel> PassiveSkills = new ArrayList<>();
 
-
     List<ingameClass> ingameClassList = new ArrayList<>();
 
     //classes(ingame characters) array
     String[] classes = {"Barbarian", "Bard", "Battlemage", "Knight",
         "Monk", "Necromancer", "Ninja", "Paladin", "Ranger", "Rogue", "Witch", "Wizzard"};
     //String[] inGameClasses = new String[12];
-
 
     /**
      * Creates new form mainWindow
@@ -57,16 +57,15 @@ public class mainWindow extends javax.swing.JFrame {
         buildGridskills();
         fillComboClasses();
         createInGameClassesFromJson();
-        
+
         this.pnl_skills.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
         this.pnl_passives.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
         this.pnl_skillsGrids.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-        
+
         hideSkillsPanel();
-        
+
     }
 
-    
     //methods
     //method to put the labels in arrays
     private void fillLabelLists() {
@@ -120,13 +119,14 @@ public class mainWindow extends javax.swing.JFrame {
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
             JSONArray ingameClasses = (JSONArray) jsonObject.get("ingameClass");
-            
+
             for (Object ingameClasse : ingameClasses) {
                 JSONObject currentJsonObject = (JSONObject) ingameClasse;
                 String className = (String) currentJsonObject.get("className");
+
                 //once we have the name of the ingameClass we need the skillsArray
-                
                 JSONArray skills = (JSONArray) currentJsonObject.get("skills");
+
                 for (Object skill : skills) {
                     Skills classSkills = new Skills();
                     JSONObject currentSkillObject = (JSONObject) skill;
@@ -138,14 +138,24 @@ public class mainWindow extends javax.swing.JFrame {
                     classSkills.setDescription((String) currentSkillObject.get("description"));
                     classSkills.setCoolDown((String) currentSkillObject.get("cooldown"));
                     classSkills.setIngameClassName(className);
-                    
+
+                    //we need a variable for the requirements array
+                    JSONObject requirementsJson = (JSONObject) currentSkillObject.get("requirements");
+
+                    for (Iterator iterator = requirementsJson.keySet().iterator(); iterator.hasNext();) {
+                        String key = (String) iterator.next();
+                        String value = (String) requirementsJson.get(key);
+                        System.out.println(key+":"+value);
+                        
+                        
+                    }
+
                     //ingameClass Object
                     ingameClass ingameClassObject = new ingameClass(className, classSkills);
                     ingameClassList.add(ingameClassObject);
-                    
+
                 }
             }
-            System.out.println(ingameClassList.get(0).toString());
 
         } catch (FileNotFoundException ex) {
             Logger.getLogger(mainWindow.class.getName()).log(Level.SEVERE, null, ex);
@@ -348,7 +358,7 @@ public class mainWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_skillsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_skillsActionPerformed
-        
+
         lbl_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/images/Backgrounds/skillssmall.png"))); // NOI18N
         hidePassivesPanel();
     }//GEN-LAST:event_btn_skillsActionPerformed
@@ -356,7 +366,8 @@ public class mainWindow extends javax.swing.JFrame {
         this.pnl_skills.setVisible(true);
         this.pnl_passives.setVisible(false);
     }
-    public void hideSkillsPanel(){
+
+    public void hideSkillsPanel() {
         this.pnl_skills.setVisible(false);
         this.pnl_passives.setVisible(true);
     }
