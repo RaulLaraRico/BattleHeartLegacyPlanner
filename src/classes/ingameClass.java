@@ -6,6 +6,7 @@
 
 package classes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,11 +14,13 @@ import java.util.List;
  * @author Raul
  */
 public class ingameClass {
-    private String className;
-    List<Skills> skillList;
+    private final String className;
+    private final List<Skills> skillList = new ArrayList<>();
+    
     
     public ingameClass(String className, Skills SK) {
-        
+        this.className = className;
+        this.skillList.add(SK);
     }
 
     public Skills getSkillList(String skillName) {
@@ -27,6 +30,12 @@ public class ingameClass {
     public void setSkillList(Skills SK) {
         this.skillList.add(SK);
     }
+
+    @Override
+    public String toString() {
+        return "ingameClass{" + "className=" + className + ", skillList=" + skillList + '}';
+    }
+    
     
     
 }

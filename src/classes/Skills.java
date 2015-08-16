@@ -5,6 +5,7 @@
  */
 package classes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,12 +16,21 @@ public class Skills {
 
     //attributes
     private String skillName;
+    private String description;
     private String ingameClassName;
     private String imagePath;
     private String skillType;//Passive or Active
     private String coolDown;//recharge skill time
-    private List<Requirements> requirements;
+    private List<Requirements> requirements = new ArrayList<>();
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
     public String getCoolDown() {
         return coolDown;
     }

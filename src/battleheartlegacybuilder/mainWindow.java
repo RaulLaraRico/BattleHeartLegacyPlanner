@@ -39,14 +39,14 @@ public class mainWindow extends javax.swing.JFrame {
     List<JLabel> notPassiveSkills = new ArrayList<>();
     List<JLabel> PassiveSkills = new ArrayList<>();
 
-    //classes objects
-    ingameClass ingameClassObject;
+
+    List<ingameClass> ingameClassList = new ArrayList<>();
 
     //classes(ingame characters) array
     String[] classes = {"Barbarian", "Bard", "Battlemage", "Knight",
         "Monk", "Necromancer", "Ninja", "Paladin", "Ranger", "Rogue", "Witch", "Wizzard"};
     //String[] inGameClasses = new String[12];
-    List<ingameClass> listOfIngameClasses = new ArrayList<>();
+
 
     /**
      * Creates new form mainWindow
@@ -119,42 +119,33 @@ public class mainWindow extends javax.swing.JFrame {
             FileReader reader = new FileReader(filePath);
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
-            
             JSONArray ingameClasses = (JSONArray) jsonObject.get("ingameClass");
-            
             
             for (Object ingameClasse : ingameClasses) {
                 JSONObject currentJsonObject = (JSONObject) ingameClasse;
                 String className = (String) currentJsonObject.get("className");
-                System.out.println("className: "+ className);
                 //once we have the name of the ingameClass we need the skillsArray
                 
                 JSONArray skills = (JSONArray) currentJsonObject.get("skills");
-                System.out.println(skills.toString());
                 for (Object skill : skills) {
                     Skills classSkills = new Skills();
                     JSONObject currentSkillObject = (JSONObject) skill;
-                    String skillName = (String) currentSkillObject.get("skillName");
-                    String skillType = (String) currentSkillObject.get("type");
-                    String skillUrlImg = (String) currentSkillObject.get("imgurl");
-                    String skillDescription = (String) currentSkillObject.get("description");
-                    String skillCooldown = (String) currentSkillObject.get("cooldown");
+
+                    //adding skills data to skills object
+                    classSkills.setSkillName((String) currentSkillObject.get("skillName"));
+                    classSkills.setSkillType((String) currentSkillObject.get("type"));
+                    classSkills.setImagePath((String) currentSkillObject.get("imgurl"));
+                    classSkills.setDescription((String) currentSkillObject.get("description"));
+                    classSkills.setCoolDown((String) currentSkillObject.get("cooldown"));
+                    classSkills.setIngameClassName(className);
                     
-                    classSkills.setSkillName(skillName);
-                    classSkills.setSkillType(skillType);
-                    classSkills.setImagePath(skillUrlImg);
+                    //ingameClass Object
+                    ingameClass ingameClassObject = new ingameClass(className, classSkills);
+                    ingameClassList.add(ingameClassObject);
                     
-                    System.out.println(skillName);
-                    System.out.println(skillType);
-                    System.out.println(skillUrlImg);
-                    System.out.println(skillDescription);
-                    System.out.println(skillCooldown);
-                    System.out.println("-----------------------------------");
-                    //classSkills
                 }
             }
-            //we already have the class name in variable className
-
+            System.out.println(ingameClassList.get(0).toString());
 
         } catch (FileNotFoundException ex) {
             Logger.getLogger(mainWindow.class.getName()).log(Level.SEVERE, null, ex);
