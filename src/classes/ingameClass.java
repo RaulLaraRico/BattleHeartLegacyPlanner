@@ -23,8 +23,8 @@ public class ingameClass {
         this.skillList.add(SK);
     }
 
-    public Skills getSkillList(String skillName) {
-        return skillList.get(0);
+    public List<Skills> getSkillList() {
+        return skillList;
     }
 
     public void setSkillList(Skills SK) {

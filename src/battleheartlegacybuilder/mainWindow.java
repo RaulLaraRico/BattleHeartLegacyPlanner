@@ -141,19 +141,25 @@ public class mainWindow extends javax.swing.JFrame {
 
                     //we need a variable for the requirements array
                     JSONObject requirementsJson = (JSONObject) currentSkillObject.get("requirements");
-
+                    //loop to get the requirements form each skill
                     for (Iterator iterator = requirementsJson.keySet().iterator(); iterator.hasNext();) {
                         String key = (String) iterator.next();
                         String value = (String) requirementsJson.get(key);
-                        System.out.println(key+":"+value);
-                        
-                        
+                        Requirements requir = new Requirements(key, Integer.parseInt(value));
+                        classSkills.setRequirements(requir);
                     }
 
                     //ingameClass Object
                     ingameClass ingameClassObject = new ingameClass(className, classSkills);
                     ingameClassList.add(ingameClassObject);
-
+                    
+                    //lets print the skills info to ensure everything is okay
+//                    List<Skills> skillsListToPrint = ingameClassObject.getSkillList();
+//                    
+//                    for (Object single : skillsListToPrint) {
+//                        System.out.println(single.toString());
+//                    }
+                     
                 }
             }
 

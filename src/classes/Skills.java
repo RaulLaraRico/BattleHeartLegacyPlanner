@@ -80,6 +80,11 @@ public class Skills {
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
     }
+
+    @Override
+    public String toString() {
+        return "Skills{" + "skillName=" + skillName + ", description=" + description + ", ingameClassName=" + ingameClassName + ", imagePath=" + imagePath + ", skillType=" + skillType + ", coolDown=" + coolDown + ", requirements=" + requirements + '}';
+    }
     
     
     
