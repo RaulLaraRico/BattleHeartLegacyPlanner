@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
@@ -34,19 +33,17 @@ public class mainWindow extends javax.swing.JFrame {
     //sizes
     final int notPassiveSkillsNumber = 10;
     final int PassiveSkillsNumber = 5;
-    //Lists
+    //Current character builds
     List<JLabel> currentSkills = new ArrayList<>();
     List<JLabel> currentPassives = new ArrayList<>();
-
-    List<JLabel> notPassiveSkills = new ArrayList<>();
-    List<JLabel> PassiveSkills = new ArrayList<>();
-
+    //Labels with the skill images 
+    List<JLabel> ingameClassLabelsSkills = new ArrayList<>();
+    // List of ingame class plus all the skills: Barbarian and 15 barbarian skills
     List<ingameClass> ingameClassList = new ArrayList<>();
 
     //classes(ingame characters) array
     String[] classes = {"Barbarian", "Bard", "Battlemage", "Knight",
         "Monk", "Necromancer", "Ninja", "Paladin", "Ranger", "Rogue", "Witch", "Wizzard"};
-    //String[] inGameClasses = new String[12];
 
     /**
      * Creates new form mainWindow
@@ -66,8 +63,6 @@ public class mainWindow extends javax.swing.JFrame {
 
     }
 
-    //methods
-    //method to put the labels in arrays
     private void fillLabelLists() {
         //this sux cause i set the labels not programically 
         currentSkills.add(this.lbl_skillSlot1);
@@ -108,7 +103,7 @@ public class mainWindow extends javax.swing.JFrame {
 
             label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/images/OtherImages/skillNotSlected.png")));
             this.pnl_skillsGrids.add(label);
-
+            ingameClassLabelsSkills.add(label);
         }
     }
 
@@ -152,14 +147,13 @@ public class mainWindow extends javax.swing.JFrame {
                     //ingameClass Object
                     ingameClass ingameClassObject = new ingameClass(className, classSkills);
                     ingameClassList.add(ingameClassObject);
-                    
+
                     //lets print the skills info to ensure everything is okay
 //                    List<Skills> skillsListToPrint = ingameClassObject.getSkillList();
 //                    
 //                    for (Object single : skillsListToPrint) {
 //                        System.out.println(single.toString());
 //                    }
-                     
                 }
             }
 
@@ -255,6 +249,11 @@ public class mainWindow extends javax.swing.JFrame {
         jLabel1.setText("Class:");
         pnl_main.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 50, 30));
 
+        cmb_clases.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmb_clasesActionPerformed(evt);
+            }
+        });
         pnl_main.add(cmb_clases, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 54, 160, -1));
 
         pnl_passives.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -368,6 +367,7 @@ public class mainWindow extends javax.swing.JFrame {
         lbl_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/images/Backgrounds/skillssmall.png"))); // NOI18N
         hidePassivesPanel();
     }//GEN-LAST:event_btn_skillsActionPerformed
+
     public void hidePassivesPanel() {
         this.pnl_skills.setVisible(true);
         this.pnl_passives.setVisible(false);
@@ -376,7 +376,9 @@ public class mainWindow extends javax.swing.JFrame {
     public void hideSkillsPanel() {
         this.pnl_skills.setVisible(false);
         this.pnl_passives.setVisible(true);
+
     }
+
     private void btn_passivesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_passivesActionPerformed
         lbl_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/images/Backgrounds/passivessmall.png"))); // NOI18N
         hideSkillsPanel();
@@ -385,6 +387,11 @@ public class mainWindow extends javax.swing.JFrame {
     private void lbl_skillSlot1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_skillSlot1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_lbl_skillSlot1MouseClicked
+
+    private void cmb_clasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_clasesActionPerformed
+        // TODO add your handling code here:
+        String classSelected = this.cmb_clases.getSelectedItem().toString();
+    }//GEN-LAST:event_cmb_clasesActionPerformed
 
     /**
      * @param args the command line arguments

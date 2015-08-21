@@ -6,7 +6,7 @@
                 {
                     "skillName": "Enrage",
                     "type": "Active",
-                    "imgurl": "Barbarian/Skill-barbarian-Enrage.png",
+                    "imgurl": "allSkills/enrage.png",
                     "description": "Fly into a rage for 10 seconds, + increasing all damage dealt AND recieved by 40%.",
                     "cooldown": "20 secs",
                     "requirements": {
@@ -18,7 +18,7 @@
                 {
                     "skillName": "Collosal Weapons",
                     "type": "Passive",
-                    "imgurl": "Barbarian/Skill-barbarian-ColossalWeapons.png",
+                    "imgurl": "allSkills/colossalweapons.png",
                     "description": "Allows the use of colossal two-handed weapons.",
                     "cooldown": "0 secs",
                     "requirements": {
@@ -30,7 +30,7 @@
                 {
                     "skillName": "Whirlwind",
                     "type": "Active",
-                    "imgurl": "Barbarian/Skill-barbarian-Whirlwind.png",
+                    "imgurl": "allSkills/whirlwind.png",
                     "description": "Unlease a spiral of death, dealing 3.6x normal damage to all nearby foes.  Requires a colossal weapon.",
                     "cooldown": "15 secs",
                     "requirements": {
@@ -42,7 +42,7 @@
                 {
                     "skillName": "Reckless Blow",
                     "type": "Active",
-                    "imgurl": "Barbarian/Skill-barbarian-Reckless_Blow.png",
+                    "imgurl": "allSkills/recklessblow.png",
                     "description": "A wild attack that deals 6x normal damage, but also damages you for 30% of your current health. Requires a colossal weapon.",
                     "cooldown": "8 secs",
                     "requirements": {
@@ -54,7 +54,7 @@
                 {
                     "skillName": "Death Wish",
                     "type": "Passive",
-                    "imgurl": "Barbarian/Skill-barbarian-Death_Wish.png",
+                    "imgurl": "allSkills/deathwish.png",
                     "description": "You deal extra damage the lower your current health is, reaching as high as 30% extra damage.",
                     "cooldown": "0 secs",
                     "requirements": {
@@ -67,7 +67,7 @@
                 {
                     "skillName": "Savage Pounce",
                     "type": "Active",
-                    "imgurl": "Barbarian/Skill-barbarian-Savage_Pounce.png",
+                    "imgurl": "allSkills/savagepounce.png",
                     "description": "Leap at your target, dealing 2x weapon power as crushing damage around the point of impact.",
                     "cooldown": "8 secs",
                     "requirements": {
@@ -80,7 +80,7 @@
                 {
                     "skillName": "Deep Wounds",
                     "type": "Passive",
-                    "imgurl": "Barbarian/Skill-barbarian-Deep_Wounds.png",
+                    "imgurl": "allSkills/deepwounds.png",
                     "description": "Your critical hits with bladed weapons cause enemies to bleed for additional damage.",
                     "cooldown": "0 secs",
                     "requirements": {
@@ -93,7 +93,7 @@
                 {
                     "skillName": "Banish",
                     "type": "Active",
-                    "imgurl": "Barbarian/Skill-barbarian-Banish.png",
+                    "imgurl": "allSkills/banish.png",
                     "description": "Strike your target for 2.2x damage and send them flying, knocking them down for 5 sec. Requires a colossal weapon.",
                     "cooldown": "15 secs",
                     "requirements": {
@@ -106,7 +106,7 @@
                 {
                     "skillName": "Adrenaline Rush",
                     "type": "Passive",
-                    "imgurl": "Barbarian/Skill-barbarian-Adrenaline_Rush.png",
+                    "imgurl": "allSkills/adrenalinerush.png",
                     "description": "Strike your target for 2.2x damage and send them flying, knocking them down for 5 sec. Requires a colossal weapon.",
                     "cooldown": "0 secs",
                     "requirements": {
@@ -119,7 +119,7 @@
                 {
                     "skillName": "Last Stand",
                     "type": "Active",
-                    "imgurl": "Barbarian/Skill-barbarian-Last_Stand.png",
+                    "imgurl": "allSkills/laststand.png",
                     "description": "Become immune to all damage for 8 seconds.  Can only be used when your health is below 30%.",
                     "cooldown": "40 secs",
                     "requirements": {
@@ -132,7 +132,7 @@
                 {
                     "skillName": "Slaughter",
                     "type": "Passive",
-                    "imgurl": "Barbarian/Skill-barbarian-Slaughter.png",
+                    "imgurl": "allSkills/slaughter.png",
                     "description": "Increases critical strike chance with axes by 10%",
                     "cooldown": "0 secs",
                     "requirements": {
@@ -145,7 +145,7 @@
                 {
                     "skillName": "Quake Strike",
                     "type": "Active",
-                    "imgurl": "Barbarian/Skill-barbarian-Quake_Strike.png",
+                    "imgurl": "allSkills/auakestrike.png",
                     "description": "Rend the earth in a line towards your target, dealing 4x damage to all targets in the path.  Requires a colossal weapon.",
                     "cooldown": "20 secs",
                     "requirements": {
@@ -163,7 +163,7 @@
                 {
                     "skillName": "Charm",
                     "type": "Active",
-                    "imgurl": "Bard/Skill-bard-charm.png",
+                    "imgurl": "allSkills/charm.png",
                     "description": "Charms an enemy, forcing them to fight for you for 10 seconds.",
                     "cooldown": "30 secs",
                     "requirements": {
@@ -174,7 +174,7 @@
                 {
                     "skillName": "Lucky",
                     "type": "Passive",
-                    "imgurl": "Bard/Skill-bard-lucky.png",
+                    "imgurl": "allSkills/lucky.png",
                     "description": "Charms an enemy, forcing them to fight for you for 10 seconds.",
                     "cooldown": "0 secs",
                     "requirements": {
@@ -186,7 +186,7 @@
                 {
                     "skillName": "Thrust",
                     "type": "Active",
-                    "imgurl": "Bard/Skill-bard-thrust.png",
+                    "imgurl": "allSkills/thrust.png",
                     "description": "Deals 3.5x weapon damage, and against stunned or helpless enemies always deals a critical strike. Requires a piercing melee weapon.",
                     "cooldown": "10 secs",
                     "requirements": {
@@ -198,7 +198,7 @@
                 {
                     "skillName": "Song of War",
                     "type": "Active",
-                    "imgurl": "Bard/Skill-bard-Song_of_War.png",
+                    "imgurl": "allSkills/songofwar.png",
                     "description": "increases all damage done, and reduces all damage taken by 15% for 20 seconds.",
                     "cooldown": "45 secs",
                     "requirements": {
@@ -209,7 +209,7 @@
                 {
                     "skillName": "Quick Study",
                     "type": "Passive",
-                    "imgurl": "Bard/Skill-bard-Quick_Study.png",
+                    "imgurl": "allSkills/quickstudy.png",
                     "description": "Increases all XP acquired by 10%.",
                     "cooldown": "0 secs",
                     "requirements": {
@@ -220,7 +220,7 @@
                 {
                     "skillName": "Song of Vigor",
                     "type": "Active",
-                    "imgurl": "Bard/Skill-bard-Song_Of_Vigor.png",
+                    "imgurl": "allSkills/songofvigor.png",
                     "description": "A soothing tune which slowly heals your wounds over 20 seconds.",
                     "cooldown": "45 secs",
                     "requirements": {
@@ -231,7 +231,7 @@
                 {
                     "skillName": "Disarm",
                     "type": "Active",
-                    "imgurl": "Bard/Skill-bard-Disarm.png",
+                    "imgurl": "allSkills/disarm.png",
                     "description": "Renders your enemy unarmed for 15 seconds, forcing them to fight with their fists. Requires a melee weapon.",
                     "cooldown": "25 secs",
                     "requirements": {
@@ -242,7 +242,7 @@
                 {
                     "skillName": "Favored Soul",
                     "type": "Passive",
-                    "imgurl": "Bard/Skill-bard-Favored_Soul.png",
+                    "imgurl": "allSkills/favoredsoul.png",
                     "description": "Increases the duration of positive status effects by 25%.",
                     "cooldown": "0 secs",
                     "requirements": {
@@ -253,7 +253,7 @@
                 {
                     "skillName": "Sly Wink",
                     "type": "Passive",
-                    "imgurl": "Bard/Skill-bard-Sly_Wink.png",
+                    "imgurl": "allSkills/slywink.png",
                     "description": "Increases the damage dealt by charmed foes by 50% while under your influence.",
                     "cooldown": "0 secs",
                     "requirements": {
@@ -265,7 +265,7 @@
                 {
                     "skillName": "Riposte",
                     "type": "Active",
-                    "imgurl": "Bard/Skill-bard-Riposte.png",
+                    "imgurl": "allSkills/riposte.png",
                     "description": "Enter a stance which deflects and counters the next melee attack against you. Requires a melee weapon.",
                     "cooldown": "15 secs",
                     "requirements": {
@@ -277,7 +277,7 @@
                 {
                     "skillName": "Lullaby",
                     "type": "Active",
-                    "imgurl": "Bard/Skill-bard-Lullaby.png",
+                    "imgurl": "allSkills/lullaby.png",
                     "description": "Instanly puts all nearby enemies to sleep for 10 seconds. Any damage will wake them, however.",
                     "cooldown": "30 secs",
                     "requirements": {
@@ -289,7 +289,7 @@
                 {
                     "skillName": "Generalist",
                     "type": "Passive",
-                    "imgurl": "Bard/Skill-bard-Generalist.png",
+                    "imgurl": "allSkills/generalist.png",
                     "description": "Reduces the stat requirements for equiping items or learning skills by 30%.",
                     "cooldown": "0 secs",
                     "requirements": {
@@ -301,7 +301,7 @@
                 {
                     "skillName": "Song of Inspiration",
                     "type": "Active",
-                    "imgurl": "Bard/Skill-bard-Song_Of_Inspiration.png",
+                    "imgurl": "allSkills/songofinspiration.png",
                     "description": "Instantly resets the cooldown of all of your other skills.",
                     "cooldown": "45 secs",
                     "requirements": {

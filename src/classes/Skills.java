@@ -39,8 +39,6 @@ public class Skills {
         this.coolDown = coolDown;
     }
 
-    
-    
     public String getSkillType() {
         return skillType;
     }
