@@ -145,7 +145,7 @@
                 {
                     "skillName": "Quake Strike",
                     "type": "Active",
-                    "imgurl": "allSkills/auakestrike.png",
+                    "imgurl": "allSkills/qauakestrike.png",
                     "description": "Rend the earth in a line towards your target, dealing 4x damage to all targets in the path.  Requires a colossal weapon.",
                     "cooldown": "20 secs",
                     "requirements": {

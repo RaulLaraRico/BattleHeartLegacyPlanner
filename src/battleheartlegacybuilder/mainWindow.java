@@ -5,19 +5,24 @@
  */
 package battleheartlegacybuilder;
 
+import classes.Requirements;
 import classes.Skills;
 import classes.ingameClass;
-import classes.Requirements;
 import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.Icon;
 import javax.swing.JLabel;
+import javax.swing.plaf.IconUIResource;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -36,12 +41,14 @@ public class mainWindow extends javax.swing.JFrame {
     //Current character builds
     List<JLabel> currentSkills = new ArrayList<>();
     List<JLabel> currentPassives = new ArrayList<>();
-    //Labels with the skill images 
+    //Labels with the skill images
     List<JLabel> ingameClassLabelsSkills = new ArrayList<>();
     // List of ingame class plus all the skills: Barbarian and 15 barbarian skills
-    List<ingameClass> ingameClassList = new ArrayList<>();
+    HashMap<String, ingameClass> dictionary = new HashMap<>();
+    //List<ingameClass> ingameClassList = new ArrayList<>();
 
     //classes(ingame characters) array
+    //the order of the classes inside the array is very important, we use the index from the combobox to load the correct info about skills
     String[] classes = {"Barbarian", "Bard", "Battlemage", "Knight",
         "Monk", "Necromancer", "Ninja", "Paladin", "Ranger", "Rogue", "Witch", "Wizzard"};
 
@@ -49,11 +56,11 @@ public class mainWindow extends javax.swing.JFrame {
      * Creates new form mainWindow
      */
     public mainWindow() {
+        createInGameClassesFromJson();
         initComponents();
         fillLabelLists();
         buildGridskills();
         fillComboClasses();
-        createInGameClassesFromJson();
 
         this.pnl_skills.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
         this.pnl_passives.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
@@ -107,6 +114,23 @@ public class mainWindow extends javax.swing.JFrame {
         }
     }
 
+    private void fillGridSkills(String ingameclassName) {
+
+        //getting the ingameClasses object
+        System.out.println(ingameclassName);
+        ingameClass singleClass = this.dictionary.get(ingameclassName);
+        List<Skills> singleClassSkills = singleClass.getSkillList();
+        System.out.println("SIZE " + singleClassSkills.size());
+        int counter = 0;
+        for (JLabel ingameClassLabelsSkill : this.ingameClassLabelsSkills) {
+            System.out.println(counter);
+            String iconPath = singleClass.getSkillList().get(counter).getImagePath();
+            counter++;
+            System.out.println("/media/images/" + iconPath);
+            ingameClassLabelsSkill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/images/" + iconPath)));
+        }
+    }
+
     private void createInGameClassesFromJson() {
         String filePath = mainWindow.class.getResource("/classes/data.json").getPath();
         try {
@@ -114,6 +138,9 @@ public class mainWindow extends javax.swing.JFrame {
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
             JSONArray ingameClasses = (JSONArray) jsonObject.get("ingameClass");
+            //set object (hashMap)
+            Set set = this.dictionary.entrySet();
+            Iterator iteratorSet = set.iterator();
 
             for (Object ingameClasse : ingameClasses) {
                 JSONObject currentJsonObject = (JSONObject) ingameClasse;
@@ -122,6 +149,8 @@ public class mainWindow extends javax.swing.JFrame {
                 //once we have the name of the ingameClass we need the skillsArray
                 JSONArray skills = (JSONArray) currentJsonObject.get("skills");
 
+                //list of skills
+                List<Skills> skillList = new ArrayList<>();
                 for (Object skill : skills) {
                     Skills classSkills = new Skills();
                     JSONObject currentSkillObject = (JSONObject) skill;
@@ -144,17 +173,12 @@ public class mainWindow extends javax.swing.JFrame {
                         classSkills.setRequirements(requir);
                     }
 
-                    //ingameClass Object
-                    ingameClass ingameClassObject = new ingameClass(className, classSkills);
-                    ingameClassList.add(ingameClassObject);
+                    skillList.add(classSkills);
 
-                    //lets print the skills info to ensure everything is okay
-//                    List<Skills> skillsListToPrint = ingameClassObject.getSkillList();
-//                    
-//                    for (Object single : skillsListToPrint) {
-//                        System.out.println(single.toString());
-//                    }
-                }
+                }//skills for
+                //ingameClass Object
+                ingameClass ingameClassObject = new ingameClass(className, skillList);
+                this.dictionary.put(className, ingameClassObject);
             }
 
         } catch (FileNotFoundException ex) {
@@ -373,7 +397,7 @@ public class mainWindow extends javax.swing.JFrame {
         this.pnl_passives.setVisible(false);
     }
 
-    public void hideSkillsPanel() {
+    public final void hideSkillsPanel() {
         this.pnl_skills.setVisible(false);
         this.pnl_passives.setVisible(true);
 
@@ -391,6 +415,7 @@ public class mainWindow extends javax.swing.JFrame {
     private void cmb_clasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_clasesActionPerformed
         // TODO add your handling code here:
         String classSelected = this.cmb_clases.getSelectedItem().toString();
+        fillGridSkills(classSelected);
     }//GEN-LAST:event_cmb_clasesActionPerformed
 
     /**

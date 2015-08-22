@@ -15,12 +15,12 @@ import java.util.List;
  */
 public class ingameClass {
     private final String className;
-    private final List<Skills> skillList = new ArrayList<>();
+    private List<Skills> skillList = new ArrayList<>();
     
     
-    public ingameClass(String className, Skills SK) {
+    public ingameClass(String className, List<Skills> SK) {
         this.className = className;
-        this.skillList.add(SK);
+        this.skillList = SK;
     }
 
     public List<Skills> getSkillList() {
